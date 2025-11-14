@@ -1,4 +1,4 @@
-# Frontend Mentor - Testimonials grid section
+# Frontend Mentor - Article Preview Card
 This is my solution to the Article Preview Card challenge on Frontend Mentor.
 
 ## Overview
