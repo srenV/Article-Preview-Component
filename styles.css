@@ -22,11 +22,12 @@ main {
   flex-direction: column;
   border-radius: 10px;
   max-width: 370px;
+  height: 55%;
 }
 
 #innerHeader img {
   width: 100%;
-  height: 240px;
+  height: 15em;
   object-fit: cover;
   object-position: top;
   border-top-left-radius: 10px;
@@ -131,6 +132,10 @@ p {
   vertical-align: middle;
 }
 
+.footerWrapper.active, main{
+  background-color: white;
+}
+
 .footerWrapper.active .shareButton {
   transform: translateY(-1.1em);
 }
@@ -154,7 +159,12 @@ p {
   color: hsl(228, 45%, 44%);
 }
 
-/* Responsiveness */
+/* ===================================================================== */
+
+/* ==============================Desktop================================ */
+
+/* ===================================================================== */
+
 @media (min-width: 50em) {
   body {
     display: flex;
@@ -166,34 +176,42 @@ p {
     flex-direction: row;
     grid-template-columns: auto 1fr auto;
     max-width: 50em;
-    max-height: min-content;
+    max-height: 18em;
     align-items: center;
   }
 
   #innerHeader img {
     width: 90%;
-    height: 280px;
+    height: 18em;
     object-fit: cover;
     object-position: left;
     border-radius: 10px 0 0 10px;
+    transform: translateY(.2em);
   }
 
   .footerWrapper.active .sharePanel {
     display: flex;
     transform: translateY(-1em);
-    transform: translateX(22em);
+    transform: translateX(21.5em);
     position: absolute;
     border-radius: 15px;
     scale: 70%;
     width: 25em;
   }
 
-  #innerMain h1, p{
+  #innerMain h1,
+  p {
     transform: translateY(1em);
   }
 
-  .footerContent p{
-    transform: translateY(.6em);
+  .footerContent p {
+    transform: translateY(.8em);
+  }
+
+  .footerWrapper.active .pannelSpan {
+    letter-spacing: 1.5;
+    font-size: x-large;
+    transform: translateX(0.5em);
   }
 
   .sharePanel {
@@ -222,18 +240,19 @@ p {
     border-top: 12px solid hsl(217, 19%, 35%);
   }
 
-.footerWrapper.active .shareButton {
-  transform: translateY(1px);
-}
+  .footerWrapper.active .shareButton {
+    transform: translateY(1px);
+  }
 
+  #desktopBtn {
+    display: none;
+  }
 
-
-.footerWrapper.active .footerContent {
-  display: flex;
-}
+  .footerWrapper.active .footerContent {
+    display: flex;
+  }
 
   .fullsizeContainer {
-    
     display: flex;
     flex-direction: column;
     position: relative;
