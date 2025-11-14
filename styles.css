@@ -178,6 +178,7 @@ p {
     max-width: 50em;
     max-height: 18em;
     align-items: center;
+    scale: 95%;
   }
 
   #innerHeader img {
