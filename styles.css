@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  grid-template-rows: auto 1fr auto;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  margin: 0;
+  background-color: hsl(210, 46%, 95%);
+}
+
+main {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  max-width: 370px;
+}
+
+#innerHeader img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: top;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#innerMain {
+  margin-inline: 1.9em;
+}
+
+h1 {
+  font-size: 1.2em;
+  color: hsl(214, 17%, 51%);
+}
+
+p {
+  font-size: 1em;
+  color: hsl(212, 23%, 69%);
+}
+
+.footerWrapper {
+  position: relative;
+}
+
+.footerContent,
+.sharePanel {
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+  padding: 1em 2em;
+  border-radius: 0 0 10px 10px;
+  background: white;
+  transition: background 0.3s;
+}
+
+.footerContent {
+  background: white;
+}
+
+.profilePic {
+  height: 2.2em;
+  border-radius: 50%;
+  margin-top: 1.3em;
+  margin-right: 1em;
+}
+
+.footerContent p {
+  color: hsl(214, 17%, 51%);
+  font-weight: 600;
+  margin-bottom: 1.5em;
+  margin-top: 1.2em;
+}
+
+.footerContent span {
+  font-size: 1em;
+  color: hsl(212, 23%, 69%);
+  font-weight: 500;
+}
+
+.shareButton {
+  background-image: url("./images/icon-share.svg");
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  margin-top: 1.9em;
+  margin-left: auto;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.shareButton:hover {
+  background-color: rgb(174, 170, 170);
+}
+
+.sharePanel {
+  background: hsl(217, 19%, 35%);
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+}
+
+.sharePanel span {
+  letter-spacing: 0.2em;
+  margin-right: 0.7em;
+  font-weight: bold;
+  color: hsl(212, 23%, 69%);
+}
+
+.sharePanel a img {
+  width: 28px;
+  height: 28px;
+  margin-inline: 0.5em;
+  vertical-align: middle;
+}
+
+.footerWrapper.active .shareButton {
+  transform: translateY(-1.1em);
+}
+
+.footerWrapper.active .footerContent {
+  display: none;
+}
+
+.footerWrapper.active .sharePanel {
+  display: flex;
+  transform: translateY(2em);
+  position: relative;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 2em;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Responsiveness */
+@media (min-width: 32em) {
+  body {
+    display: flex;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: auto 1fr auto;
+    max-width: 50em;
+    max-height: min-content;
+    align-items: center;
+  }
+
+  #innerHeader img {
+    width: 90%;
+    height: 280px;
+    object-fit: cover;
+    object-position: left;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .footerWrapper.active .sharePanel {
+    display: flex;
+    transform: translateY(-1em);
+    transform: translateX(15em);
+    position: absolute;
+    border-radius: 15px;
+    scale: 70%;
+  }
+
+  #innerMain h1{
+    margin: ;
+  }
+
+  .sharePanel::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -0.65em;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid hsl(217, 19%, 35%);
+  }
+
+  .fullsizeContainer {
+    
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 70%;
+  }
+}
